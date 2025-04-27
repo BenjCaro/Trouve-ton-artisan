@@ -3,7 +3,9 @@
  const Banniere = () => {
     return (
         <>
-        <img alt='banniere' src={banniere} className='img-fluid'/>
+          <figure className='banniere'>
+            <img alt='banniere' src={banniere} className='img-fluid'/>
+          </figure>
         </>
     );
  };
