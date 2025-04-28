@@ -18,3 +18,12 @@
     color: #00497C;
 
 }
+
+
+@media screen and (max-width: 786px) {
+
+    .banner {
+        display: none;
+    }
+    
+}

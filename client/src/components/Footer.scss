@@ -25,8 +25,7 @@ footer {
     text-decoration: none;
     position: relative;
     display: inline-block;
-    // border-bottom: 2px solid transparent;
-    // transition: border-color 1s;
+    
     
 }
 
@@ -45,14 +44,31 @@ footer {
 }
 
 .footer-link:hover::after {
-   // border-bottom: 2px solid #fff;
    transform: scaleX(1);
-    
-    
+
 
 }
 
 hr {
     margin: auto;
     max-width: 300px;
+}
+
+
+@media  screen and (max-width: 768px) {
+
+    .bloc-footer-adress {
+        flex-direction: column;
+        margin-left: 3em;
+    }
+
+    .bloc-footer-menu {
+        justify-content: flex-start !important;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        
+    }
+    
 }

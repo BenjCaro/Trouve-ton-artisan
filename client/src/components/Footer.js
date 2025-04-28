@@ -5,9 +5,8 @@ import logo from '../assets/logo/Logo.png';
 const Footer = () => {
     return (
         <>
-
           <footer className='container-fluid'>
-            <div className='d-flex justify-content-evenly pt-3'>
+            <div className='d-flex justify-content-evenly pt-3 bloc-footer-adress'>
                 <div>
                 <img src={logo} className='footer-logo'/>
                 </div>
@@ -24,7 +23,7 @@ const Footer = () => {
                 </div>
             </div>
             <hr/>
-            <div className='d-flex justify-content-center mt-3'>
+            <div className='bloc-footer-menu d-flex justify-content-center mt-3'>
                 <ul className='footer-menu d-flex'>
                     <li className='ms-3'>
                         <a href='#' className='footer-link'>Mentions Légales</a>

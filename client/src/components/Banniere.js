@@ -4,7 +4,7 @@ import './Header.scss';
 const Banniere = () => {
     return (
         <>
-        <img src={banner} className='img-fluid'/>
+        <img src={banner} className='img-fluid banner'/>
         </>
     );
 };
