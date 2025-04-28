@@ -4,7 +4,7 @@ import bronze from '../assets/logo/medal-bronze.svg';
 const Cards = () => {
     return (
         <>
-            <div className='container d-flex gap-3 justify-content-center mt-3 mb-5'>
+            <div className='bloc-cards container d-flex gap-3 justify-content-center mt-3 mb-5'>
                 <div className='top-card d-flex justify-content-start align-items-center'>
                     <img src={gold} className='medal-icon'/>
                     <ul className='card-infos mt-3 ms-2'>
