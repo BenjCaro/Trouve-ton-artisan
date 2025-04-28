@@ -33,11 +33,47 @@ section {
     object-fit: cover;
 }
 
+.top-card {
+    position: relative;
+    width: 350px;
+    height: 200px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    background-color: rgb(0, 116, 199);
+    
+}
+
+.card-infos {
+    color: #fff;
+}
+
+.medal-icon {
+    position: absolute;
+    right: 3.16%;
+    left: 75%;
+    top: 3.05%;
+    bottom: 78.88%;
+
+}
+
 
 @media screen and (max-width: 768px) {
 
     .home-pictures {
         display: none;
+    }
+
+    .remove-hr {
+        display: none;
+    }
+
+    .medal-icon {
+        position: absolute;
+        right: 3.16%;
+        left: 65%;
+        top: 3.05%;
+        bottom: 78.88%;
+    
     }
     
 }
