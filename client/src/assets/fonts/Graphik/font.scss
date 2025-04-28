@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Graphik';
+    src: url('Graphik-Regular.woff2') format('woff2'),
+        url('Graphik-Regular.woff') format('woff'),
+        url('Graphik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('Graphik-Bold.woff2') format('woff2'),
+        url('Graphik-Bold.woff') format('woff'),
+        url('Graphik-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('Graphik-Light.woff2') format('woff2'),
+        url('Graphik-Light.woff') format('woff'),
+        url('Graphik-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('Graphik-Medium.woff2') format('woff2'),
+        url('Graphik-Medium.woff') format('woff'),
+        url('Graphik-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('Graphik-RegularItalic.woff2') format('woff2'),
+        url('Graphik-RegularItalic.woff') format('woff'),
+        url('Graphik-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('Graphik-Semibold.woff2') format('woff2'),
+        url('Graphik-Semibold.woff') format('woff'),
+        url('Graphik-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
