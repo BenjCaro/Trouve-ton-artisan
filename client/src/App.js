@@ -1,11 +1,16 @@
 /* ici mettre les imports des composants , .css, etc */
-import Banniere from './components/Banniere';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
  return (
      <>
-     <h1>hello world</h1> 
-     <Banniere/>
+        <Header/>
+        <main>
+         
+        </main>
+        <Footer/>
+
      </>
    );
 }

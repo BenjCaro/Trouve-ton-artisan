@@ -1,0 +1,29 @@
+.menu-logo {
+    max-width: 150px;
+    height: auto;
+}
+.menu {
+
+    border-bottom: 3px solid #f1f7fc;
+    box-shadow: 0 0 4px #f1f7fc;
+}
+
+
+.menu-link {
+     color: #0074C7;
+
+}
+
+.menu-link:hover {
+    color: #00497C;
+
+}
+
+
+@media screen and (max-width: 786px) {
+
+    .banner {
+        display: none;
+    }
+    
+}

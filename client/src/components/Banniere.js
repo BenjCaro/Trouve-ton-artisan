@@ -1,11 +1,14 @@
- import banniere from '../assets/images/img-banniere.png';
- 
- const Banniere = () => {
+import banner from '../assets/images/banner.png';
+import './Header.scss';
+
+const Banniere = () => {
     return (
         <>
-        <img alt='banniere' src={banniere} className='img-fluid'/>
+        <img src={banner} className='img-fluid banner'/>
         </>
     );
- };
+};
 
- export default Banniere
+
+
+export default Banniere;
