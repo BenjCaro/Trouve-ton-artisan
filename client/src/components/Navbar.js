@@ -1,6 +1,6 @@
 import logo from '../assets/logo/Logo.png';
 import search from '../assets/logo/search-blue.svg';
-import './Header.scss';
+import '../assets/css/Header.scss';
 
 
 

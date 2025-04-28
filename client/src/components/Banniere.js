@@ -1,5 +1,5 @@
 import banner from '../assets/images/banner.png';
-import './Header.scss';
+import '../assets/css/Header.scss';
 
 const Banniere = () => {
     return (
