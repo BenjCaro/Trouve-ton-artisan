@@ -1,4 +1,5 @@
-import './Footer.scss';
+
+import '../assets/css/Footer.scss';
 import logo from '../assets/logo/Logo.png';
 
 
@@ -11,8 +12,8 @@ const Footer = () => {
                 <img src={logo} className='footer-logo'/>
                 </div>
 
-                <div>
-                    <h2 className='footer-adress'>Lyon</h2>
+                <div className='mt-3'>
+                    <h2 className='footer-adress fs-5'>Lyon</h2>
                     <p className='footer-adress'> 
                         
                         101 cours Charlemagne  <br/>

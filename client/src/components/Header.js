@@ -1,4 +1,4 @@
-import './Header.scss';
+import '../assets/css/Header.scss';
 import Navbar from './Navbar';
 import Banniere from './Banniere';
 
@@ -6,8 +6,11 @@ import Banniere from './Banniere';
 const Header = () => {
     return (
         <>
-           <Navbar/>
-           <Banniere/>
+        <header>
+            <Navbar/>
+            <Banniere/>
+        </header>
+          
 
         </>
     );
