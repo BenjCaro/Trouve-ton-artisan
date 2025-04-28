@@ -1,11 +1,11 @@
 import '../assets/css/Breadcrumb.scss';
 
-const Breadcrump = () => {
+const Breadcrumb = () => {
     return (
         <>
          <ul className='mt-3'>
             <li>
-                <a href='#' className='breadcrump-link'>Accueil</a>
+                <a href='#' className='breadcrumb-link'>Accueil</a>
             </li>
          </ul>
         </>
@@ -13,7 +13,7 @@ const Breadcrump = () => {
 
 };
 
-export default Breadcrump;
+export default Breadcrumb;
 
 
 
