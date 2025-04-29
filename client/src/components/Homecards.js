@@ -1,7 +1,8 @@
 import gold from '../assets/logo/medal.svg';
 import silver from '../assets/logo/medal-silver.svg';
 import bronze from '../assets/logo/medal-bronze.svg';
-const Cards = () => {
+
+const Homecards = () => {
     return (
         <>
             <div className='bloc-cards container d-flex gap-3 justify-content-center mt-3 mb-5'>
@@ -37,7 +38,7 @@ const Cards = () => {
     );
 };
 
-export default Cards;
+export default Homecards;
 
 
 
