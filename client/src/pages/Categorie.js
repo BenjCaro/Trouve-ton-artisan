@@ -14,13 +14,13 @@ const Categorie = () => {
                  <Header/>
             </header>
             <main className='mb-3'>
-                {/* <Breadcrumb/> */}
+                <Breadcrumb/> 
                 <MainTitle name='Alimentation'/>
                 <section className='container mb-5'>
                     <Card/>
                     <Card/>
                     <Card/>
-                 </section>
+                </section>
             </main>
             <Footer/>
         </>
