@@ -1,7 +1,8 @@
 import Header from '../components/Header';
 import Breadcrumb from '../components/Breadcrumb';
+import MainTitle from '../components/MainTitle';
 import Pictures from '../components/Pictures';
-import Cards from '../components/Cards';
+import Homecards from '../components/Homecards';
 import Footer from '../components/Footer';
 import hammer from '../assets/logo/hammer-blue.svg';
 
@@ -15,14 +16,8 @@ const Home = () => {
         </header>
         <main className='mb-3'>
             <Breadcrumb/>
-            <h1 className='main-title text-center'>
-                Vous cherchez un artisan dans votre région?
-            </h1>
-             <p className='text-center' >
-                Nous vous guidons.
-             </p>
-             <hr className='main-hr'/>
-             <section className='mb-3'>
+            <MainTitle name='Accueil'/>
+            <section className='mb-3'>
                 <h2 className='section-title text-center'>
                     Comment trouver mon artisan?
                 </h2>
@@ -47,16 +42,16 @@ const Home = () => {
                 </div>
                 <hr className='main-hr'/>
                 <Pictures/>
-             </section>
-             <hr className='main-hr remove-hr'/>
-             <section className='mb-3'>
+            </section>
+            <hr className='main-hr remove-hr'/>
+            <section className='mb-3'>
                 <h2 className='section-title text-center mt-3 mb-4'>Top 3 des Artisans du mois 
                     <span className='ms-3'>
                         <img src={hammer}/>
                     </span>
                 </h2>
-                <Cards/>
-             </section>   
+                <Homecards/>
+            </section>   
          </main>
          <Footer/>
         </>
