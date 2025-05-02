@@ -5,8 +5,6 @@ const { connectDB, sequelize } = require('./db/database');
 connectDB();
 const app = express();
 
-
-
 app.use(express.static(path.join(__dirname, '../client/build')));
 
 
