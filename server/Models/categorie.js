@@ -1,7 +1,7 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const { sequelize } = require('../db/database');
 
-const Categorie = sequelize.define(Categorie, {
+const Categorie = sequelize.define('Categorie', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -10,5 +10,11 @@ const Categorie = sequelize.define(Categorie, {
 
     nom_categorie: {
         type: DataTypes.STRING(55)
-    }
-});
+    }},
+
+    {
+        timestamps: false
+    });
+
+
+module.exports = Categorie;

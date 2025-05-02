@@ -1,13 +1,15 @@
 const express = require('express');
 const path = require('path');
 const { connectDB, sequelize } = require('./db/database');
+const Artisan = require('./Models/artisan');
+
 
 connectDB();
 const app = express();
 
 app.use(express.static(path.join(__dirname, '../client/build')));
 
-console.log(specialite.Artisans);
+
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));

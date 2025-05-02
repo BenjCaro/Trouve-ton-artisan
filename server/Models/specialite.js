@@ -1,7 +1,8 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const { sequelize } = require('../db/database');
+const Categorie = require('./categorie')
 
-const Specialite = sequelize.define(Specialite, {
+const Specialite = sequelize.define('Specialite', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -19,9 +20,11 @@ const Specialite = sequelize.define(Specialite, {
             model: Categorie,
             key: 'id'
         }
-    }
+    }},
 
-});
+    {
+        timestamps: false,
+    });
 
 Specialite.belongsTo(Categorie, {
     foreignKey: 'categorie'
@@ -30,3 +33,5 @@ Specialite.belongsTo(Categorie, {
 Categorie.hasMany(Specialite, {
     foreignKey: 'categorie'
 });
+
+module.exports = Specialite;

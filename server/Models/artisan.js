@@ -1,27 +1,26 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const { sequelize } = require('../db/database');
+const Specialite = require('./specialite');
 
 
-const Artisan = sequelize.define(Artisan, {
+
+const Artisan = sequelize.define('Artisan', {
     id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTEGER,   
         primaryKey: true,
         autoIncrement: true
-
     },
 
     nom_artisan: {
         type: DataTypes.STRING(155)
-
     },
 
-    specialite : {
+    specialite: {
         type: DataTypes.INTEGER,
         references: {
             model: Specialite,
             key: "id"
-        },
-
+        }
     },
 
     note: {
@@ -32,7 +31,6 @@ const Artisan = sequelize.define(Artisan, {
     ville: {
         type: DataTypes.STRING(55),
         allowNull: false
-
     },
 
     a_propos: {
@@ -43,20 +41,20 @@ const Artisan = sequelize.define(Artisan, {
         type: DataTypes.STRING(155),
         unique: true,
         allowNull: false
-
     },
 
     slug: {
         type: DataTypes.STRING(155)
-
     },
 
     top_artisan: {
         type: DataTypes.BOOLEAN
-
     }
 
+}, {
+    timestamps: false 
 });
+
 
 Artisan.belongsTo(Specialite, {
     foreignKey: 'specialite'
@@ -66,3 +64,6 @@ Artisan.belongsTo(Specialite, {
 Specialite.hasMany(Artisan, {
     foreignKey: 'specialite'
 });
+
+
+module.exports = Artisan;
