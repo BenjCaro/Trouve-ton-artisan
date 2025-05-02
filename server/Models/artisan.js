@@ -57,3 +57,12 @@ const Artisan = sequelize.define(Artisan, {
     }
 
 });
+
+Artisan.belongsTo(Specialite, {
+    foreignKey: 'specialite'
+    
+});
+
+Specialite.hasMany(Artisan, {
+    foreignKey: 'specialite'
+});

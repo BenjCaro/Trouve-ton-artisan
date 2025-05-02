@@ -22,3 +22,11 @@ const Specialite = sequelize.define(Specialite, {
     }
 
 });
+
+Specialite.belongsTo(Categorie, {
+    foreignKey: 'categorie'
+});
+
+Categorie.hasMany(Specialite, {
+    foreignKey: 'categorie'
+});
