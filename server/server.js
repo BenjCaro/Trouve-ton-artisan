@@ -1,9 +1,10 @@
 const express = require('express');
 const path = require('path');
+require('dotenv').config({ path: './env/.env' });
+
+// console.log(process.env.password);
+
 const app = express();
-
-
-
 
 
 app.use(express.static(path.join(__dirname, '../client/build')));
