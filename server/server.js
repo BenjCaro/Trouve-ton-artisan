@@ -1,8 +1,9 @@
 const express = require('express');
 const path = require('path');
+
 const { connectDB, sequelize } = require('./db/database');
-const Artisan = require('./Models/artisan');
-const Specialite = require('./Models/specialite');
+const {Artisan, Specialite, Categorie} = require('./Models');
+
 
 
 connectDB();
@@ -16,13 +17,16 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
 
-
-
+// Affiche le top 3 des Artisans
 app.get('/api/artisan', async (req, res) => {
    const artisan = await Artisan.findAll({
-    attributes: ['nom_artisan'],
+    attributes: ['nom_artisan', 'note', 'ville'],
     where: {
       top_artisan: true
+    },
+    include: {
+      model: Specialite,
+      attributes: ['nom_specialite']
     }
    });
    res.json(artisan);
