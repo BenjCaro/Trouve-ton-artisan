@@ -3,7 +3,7 @@ const {Artisan, Specialite, Categorie} = require('../Models');
 // exports.getArtisan = async (req, res) => {
 
 //     try {
-//         const artisan = await Artisan.find({
+//         const artisan = await Artisan.findOne({
 
 
 //         })
