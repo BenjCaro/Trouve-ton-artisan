@@ -2,7 +2,7 @@ require('dotenv').config({ path: './env/.env' });
 const { Sequelize } = require('sequelize');
 
 
-const sequelize = new Sequelize('trouve_ton_artisan', 'admin', process.env.password, {
+const sequelize = new Sequelize('trouve_ton_artisan', 'admin2', process.env.password, {
   host: 'localhost',
   port: 3306,
   dialect: 'mysql'
