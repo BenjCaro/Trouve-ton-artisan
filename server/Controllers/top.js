@@ -12,7 +12,8 @@ exports.topArtisan = async (req, res) => {
             include: {
             model: Specialite,
             attributes: ['nom_specialite']
-             }
+             },
+             order: [['note', 'DESC']]
             });
             
             res.json(artisan);
