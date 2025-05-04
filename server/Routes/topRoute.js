@@ -5,6 +5,6 @@ const controller = require('../Controllers/top');
 
 
 
-router.get('/', controller.topArtisan);
+router.get('/', controller.getTopArtisan);
 
 module.exports = router;

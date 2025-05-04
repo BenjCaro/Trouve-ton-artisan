@@ -1,7 +1,7 @@
 const {Artisan, Specialite} = require('../Models');
 
 
-exports.topArtisan = async (req, res) => {
+exports.getTopArtisan = async (req, res) => {
     try {
        
         const artisan = await Artisan.findAll({
