@@ -4,7 +4,7 @@ const { connectDB, sequelize } = require('./db/database');
 const topRouter = require('./Routes/topRoute');
 const artisanRouter = require('./Routes/artisanRoute');
 const categorieRouter = require('./Routes/categorieRoute');
-// const searchRouter = require('./Routes/searchArtisanRoute');
+const searchRouter = require('./Routes/searchArtisanRoute');
 
 
 connectDB();
@@ -19,6 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/top-artisan', topRouter);
 app.use('/api/artisan', artisanRouter);
 app.use('/api', categorieRouter);
+app.use('/api/search', searchRouter);
 
 
 

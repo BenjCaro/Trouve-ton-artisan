@@ -3,6 +3,11 @@ const router = express.Router();
 
 const controller = require('../Controllers/search');
 
-router.get('/:nom', controller.getArtisan );
+router.get('/', controller.searchArtisanByName );
 
 module.exports = router;
+
+
+
+
+
