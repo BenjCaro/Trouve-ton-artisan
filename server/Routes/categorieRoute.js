@@ -3,6 +3,6 @@ const router = express.Router();
 
 const controller = require('../Controllers/categorie');
 
-router.get('/categorie', controller.getAllArtisanByCategorie);
+router.get('/categorie/:slug', controller.getAllArtisanByCategorie);
 
 module.exports = router;

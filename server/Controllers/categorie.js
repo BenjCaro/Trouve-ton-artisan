@@ -3,9 +3,10 @@ const {Artisan, Specialite, Categorie} = require('../Models');
 exports.getAllArtisanByCategorie = async (req, res) => {
     try {
          
+        const slug = req.params.slug;
 
-        const categorie = await Categorie.findAll({
-            where: { nom_categorie: 'alimentation' }, // insérer le slug ici 
+        const categorie = await Categorie.findOne({
+            where: { slug: slug }, // insérer le slug ici 
             attributes: ['nom_categorie'],
             include: [{
                 model: Specialite,
