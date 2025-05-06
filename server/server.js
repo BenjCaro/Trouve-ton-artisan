@@ -4,6 +4,7 @@ const { connectDB, sequelize } = require('./db/database');
 const topRouter = require('./Routes/topRoute');
 const artisanRouter = require('./Routes/artisanRoute');
 const categorieRouter = require('./Routes/categorieRoute');
+const searchRouter = require('./Routes/searchArtisanRoute');
 
 
 connectDB();
