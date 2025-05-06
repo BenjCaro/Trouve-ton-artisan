@@ -11,8 +11,13 @@ module.exports = (sequelize, DataTypes) => {
     
         nom_categorie: {
             type: DataTypes.STRING(55)
-        }},
-    
+        },
+        
+        slug : {
+            type: DataTypes.STRING(155)
+        }
+    },
+        
         {
             timestamps: false
         });

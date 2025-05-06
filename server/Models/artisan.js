@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
     
-        slug: {
+        site_web: {
             type: DataTypes.STRING(155)
         },
     
