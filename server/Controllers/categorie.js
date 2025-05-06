@@ -5,7 +5,7 @@ exports.getAllArtisanByCategorie = async (req, res) => {
          
 
         const categorie = await Categorie.findAll({
-            where: { nom_categorie: 'alimentation' },
+            where: { nom_categorie: 'alimentation' }, // insérer le slug ici 
             attributes: ['nom_categorie'],
             include: [{
                 model: Specialite,
