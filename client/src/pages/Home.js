@@ -16,7 +16,7 @@ const Home = () => {
             <Header/>
         </header>
         <main className='mb-3'>
-            <Breadcrumb/>
+            
             <MainTitle name='Accueil'/>
             <section className='mb-3'>
                 <h2 className='section-title text-center'>
