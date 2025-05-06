@@ -8,8 +8,9 @@ import hammer from '../assets/logo/hammer-blue.svg';
 
 
 
+
 const Home = () => {
-    return (
+     return (
         <>
         <header>
             <Header/>
