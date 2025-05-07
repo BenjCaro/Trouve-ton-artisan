@@ -19,9 +19,9 @@ const Homecards = ({artisan}) => {
     }, []);
 
     return (
-            <div className='bloc-cards container d-flex gap-3 justify-content-center mt-3 mb-5'>
+            <div className='bloc-cards container d-flex gap-5 justify-content-center mt-3 mb-5'>
                 {useTopArtisans.map((artisan, index) => (
-                <Link to={`/artisan/${artisan.id}`}>
+                <Link to={`/artisan/${artisan.id}`} className='text-decoration-none' >
                     <div key={index} className='top-card d-flex justify-content-start align-items-center'>
                         <img src={index === 0 ? gold : index === 1 ? silver : bronze} className='medal-icon'/>
                         <ul className='card-infos mt-3 ms-2'>
