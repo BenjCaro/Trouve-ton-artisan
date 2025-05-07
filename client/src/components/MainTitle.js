@@ -1,11 +1,11 @@
 
 
-const MainTitle = (props) => {
+const MainTitle = ({title}) => {
     return (
         <>
 
-        <h1 className='main-title text-center'>
-                {props.name}
+        <h1 className='main-title text-center text-capitalize'>
+                {title}
         </h1>
         <p className='text-center' >
                 Choissisez votre artisan et cliquez sur ses informations.
@@ -13,6 +13,6 @@ const MainTitle = (props) => {
         <hr className='main-hr'/>
         </>
     )
-}
+};
 
 export default MainTitle;

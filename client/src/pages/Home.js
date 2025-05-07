@@ -1,5 +1,4 @@
 import Header from '../components/Header';
-import Breadcrumb from '../components/Breadcrumb';
 import MainTitle from '../components/MainTitle';
 import Pictures from '../components/Pictures';
 import Homecards from '../components/Homecards';
@@ -17,7 +16,7 @@ const Home = () => {
         </header>
         <main className='mb-3'>
             
-            <MainTitle name='Accueil'/>
+            <h1 className='main-title text-center mt-3'>Accueil</h1>
             <section className='mb-3'>
                 <h2 className='section-title text-center'>
                     Comment trouver mon artisan?
