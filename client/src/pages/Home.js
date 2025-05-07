@@ -1,5 +1,5 @@
 import Header from '../components/Header';
-import MainTitle from '../components/MainTitle';
+
 import Pictures from '../components/Pictures';
 import Homecards from '../components/Homecards';
 import Footer from '../components/Footer';
@@ -50,7 +50,7 @@ const Home = () => {
                         <img src={hammer}/>
                     </span>
                 </h2>
-                <Homecards/>
+                <Homecards />
             </section>   
          </main>
          <Footer/>

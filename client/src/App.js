@@ -13,6 +13,7 @@ function App() {
         <Route path="/categorie/:slug" element={<Categorie/>}>Batiment</Route>
         <Route path="/categorie/:slug" element={<Categorie/>}>Fabrication</Route>
         <Route path="/categorie/:slug" element={<Categorie/>}>Services</Route>
+        <Route path="/artisan/:id" element={<Artisan />} />
      </Routes>
        
       
