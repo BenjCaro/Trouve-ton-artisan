@@ -13,7 +13,7 @@ exports.getAllArtisanByCategorie = async (req, res) => {
                 attributes: ['nom_specialite'],
                 include: [{
                     model: Artisan,
-                    attributes: ['nom_artisan']
+                    attributes: ['nom_artisan', 'note', 'ville']
                 }]
             }]
         });
