@@ -39,7 +39,7 @@ const Categorie = () => {
                             {categorie.Specialites &&
                                 categorie.Specialites.map((specialite) =>
                                 specialite.Artisans.map((artisan, index) => (
-                            <div className=''>
+                            <div className='col-lg-4 mb-3 d-flex justify-content-center'>
                                 <Card key={index} artisan={artisan} specialite={specialite.nom_specialite} />
                             </div>
                             
