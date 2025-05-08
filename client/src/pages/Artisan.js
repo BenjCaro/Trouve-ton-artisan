@@ -45,6 +45,12 @@ console.log("Nom catégorie:", artisan.Specialite?.Categorie?.nom_categorie);
                                 <li>{artisan.note}</li>
                                 <li className='text-capitalize'>{artisan.Specialite ? artisan.Specialite.nom_specialite : "Chargement..."}</li>
                                 <li className='text-capitalize'>{artisan.ville}</li>
+                                {/* <li>{artisan.site_web ? (
+                                                <a href={artisan.site_web} target="_blank" rel="noopener noreferrer">
+                                                    Visiter le site
+                                                </a>
+                                                ) : null}  A DECOMMENTER APRES MAJ de la BDD
+                                </li> */}
                             </ul>
                         </div>
                         <div>
