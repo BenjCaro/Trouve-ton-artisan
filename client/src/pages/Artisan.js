@@ -45,6 +45,12 @@ console.log("Nom catégorie:", artisan.Specialite?.Categorie?.nom_categorie);
                                 <li>{artisan.note}</li>
                                 <li className='text-capitalize'>{artisan.Specialite ? artisan.Specialite.nom_specialite : "Chargement..."}</li>
                                 <li className='text-capitalize'>{artisan.ville}</li>
+                                {/* <li>{artisan.site_web ? (
+                                                <a href={artisan.site_web} target="_blank" rel="noopener noreferrer">
+                                                    Visiter le site
+                                                </a>
+                                                ) : null}  A DECOMMENTER APRES MAJ de la BDD
+                                </li> */}
                             </ul>
                         </div>
                         <div>
@@ -62,7 +68,7 @@ console.log("Nom catégorie:", artisan.Specialite?.Categorie?.nom_categorie);
                 <section className='container mb-5 d-flex flex-column align-items-center'>
                 <h2 className='section-title text-center ms-2'>Contactez {artisan.nom_artisan}</h2>
                 
-                   <Form artisan/>
+                   <Form artisan={artisan}/>
                     
                 </section>
             </main>
