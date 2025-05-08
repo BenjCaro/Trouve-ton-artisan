@@ -43,6 +43,16 @@ section {
     object-fit: cover;
 }
 
+.card {
+    position: relative;
+    width: 350px;
+    height: 200px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    background-color: rgb(0, 116, 199);  
+    
+}
+
 .top-card {
     position: relative;
     width: 350px;
@@ -52,6 +62,9 @@ section {
     background-color: rgb(0, 116, 199);  
     transition: transform 0.3s ease-in-out;
 }
+
+
+
 
 .top-card:hover {
     background-color: #cd2c2e;

@@ -15,6 +15,7 @@ const Artisan = () => {
      const getArtisan = async () => {
         const res = await fetch(`/api/artisan/${id}`);
         const json = await res.json();
+        console.log(json);
         setArtisan(json);
      };
 
@@ -22,8 +23,10 @@ const Artisan = () => {
         getArtisan();
      }, [id]);
 
-console.log(artisan);
-    
+// console.log(artisan);
+console.log("Specialite:", artisan.Specialite);
+console.log("Categorie:", artisan.Specialite?.Categorie);
+console.log("Nom catégorie:", artisan.Specialite?.Categorie?.nom_categorie);
 
     return (
         <>
@@ -36,16 +39,15 @@ console.log(artisan);
                 <hr className='main-hr'/>
                 <section className='container mb-5'>
                     <div className='bloc-infos-artisan d-flex .flex-row justify-content-center align-items-center mb-3 gap-3'>
-                        <div className='top-card d-flex flex-column justify-content-center'>
-                            <h2 className='secondary-title ms-2'>{artisan.nom_artisan}</h2>
+                        <div className='card d-flex flex-column justify-content-center'>
                             <ul className='card-infos mt-3 ms-2'>
-                                {/* <li>Nom</li> */}
+                                <li className='fs-5 text-capitalize'>{artisan.Specialite?.Categorie?.nom_categorie || "Catégorie inconnue"}</li>
                                 <li>{artisan.note}</li>
-                                <li className='text-capitalize'>Spécialité</li>
+                                <li className='text-capitalize'>{artisan.Specialite ? artisan.Specialite.nom_specialite : "Chargement..."}</li>
                                 <li className='text-capitalize'>{artisan.ville}</li>
                             </ul>
                         </div>
-                        <div className=''>
+                        <div>
                             <figure className='artisan-pictures'>
                                 <img src={work} className='img-fluid'/>
                             </figure>
