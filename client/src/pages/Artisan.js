@@ -62,7 +62,7 @@ console.log("Nom catégorie:", artisan.Specialite?.Categorie?.nom_categorie);
                 <section className='container mb-5 d-flex flex-column align-items-center'>
                 <h2 className='section-title text-center ms-2'>Contactez {artisan.nom_artisan}</h2>
                 
-                   <Form/>
+                   <Form artisan/>
                     
                 </section>
             </main>
