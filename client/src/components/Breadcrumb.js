@@ -1,11 +1,12 @@
 import '../assets/css/Breadcrumb.scss';
+import { NavLink } from "react-router-dom";
 
 const Breadcrumb = () => {
     return (
         <>
          <ul className='mt-3'>
             <li>
-                <a href='#' className='breadcrumb-link'>Accueil</a>
+                <NavLink to='/' className='breadcrumb-link'>Accueil</NavLink>
             </li>
          </ul>
         </>

@@ -5,7 +5,7 @@ exports.getTopArtisan = async (req, res) => {
     try {
        
         const artisan = await Artisan.findAll({
-            attributes: ['nom_artisan', 'note', 'ville'],
+            attributes: ['id','nom_artisan', 'note', 'ville'],
             where: {
                top_artisan: true
             },

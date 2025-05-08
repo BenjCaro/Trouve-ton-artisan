@@ -1,6 +1,5 @@
 import Header from '../components/Header';
-import Breadcrumb from '../components/Breadcrumb';
-import MainTitle from '../components/MainTitle';
+
 import Pictures from '../components/Pictures';
 import Homecards from '../components/Homecards';
 import Footer from '../components/Footer';
@@ -8,15 +7,16 @@ import hammer from '../assets/logo/hammer-blue.svg';
 
 
 
+
 const Home = () => {
-    return (
+     return (
         <>
         <header>
             <Header/>
         </header>
         <main className='mb-3'>
-            <Breadcrumb/>
-            <MainTitle name='Accueil'/>
+            
+            <h1 className='main-title text-center mt-3'>Accueil</h1>
             <section className='mb-3'>
                 <h2 className='section-title text-center'>
                     Comment trouver mon artisan?
@@ -50,7 +50,7 @@ const Home = () => {
                         <img src={hammer}/>
                     </span>
                 </h2>
-                <Homecards/>
+                <Homecards />
             </section>   
          </main>
          <Footer/>

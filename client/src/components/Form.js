@@ -1,13 +1,13 @@
 import '../assets/css/form.scss';
 
 
-const Form = () => {
+const Form = ({ artisan}) => {
     return (
         <>
-                <form className='form-contact row mt-3 p-3' method='post'>
+                <form className='form-contact row mt-3 p-3' action={`mailto:${artisan?.email}`} method='post'>
                     <fieldset className="mb-3 mt-3">
                         <label for="name" className="form-label fw-semibold">Nom</label>
-                        <input type="email" className="form-items form-control" id="name" placeholder="Votre Nom" required/>
+                        <input type="text" className="form-items form-control" id="name" placeholder="Votre Nom" required/>
                     </fieldset>
                     <fieldset className="mb-3 ">
                         <label for="email" className="form-label fw-semibold">Email</label>

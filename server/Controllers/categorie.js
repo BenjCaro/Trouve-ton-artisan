@@ -6,14 +6,14 @@ exports.getAllArtisanByCategorie = async (req, res) => {
         const slug = req.params.slug;
 
         const categorie = await Categorie.findOne({
-            where: { slug: slug }, // insérer le slug ici 
+            where: { slug: slug }, 
             attributes: ['nom_categorie'],
             include: [{
                 model: Specialite,
                 attributes: ['nom_specialite'],
                 include: [{
                     model: Artisan,
-                    attributes: ['nom_artisan']
+                    attributes: ['id','nom_artisan', 'note', 'ville']
                 }]
             }]
         });

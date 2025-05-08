@@ -1,11 +1,21 @@
-const {Artisan} = require('../Models');
+const {Artisan, Specialite, Categorie} = require('../Models');
 
 exports.getArtisan = async (req, res) => {
     
     const id = Number(req.params.id); 
 
     try {
-        const artisan = await Artisan.findOne({ where: { id: id } });
+        const artisan = await Artisan.findOne({ 
+            where: { id: id },
+            include: [{ 
+                model: Specialite,
+                attributes: ['nom_specialite'],
+                include : [{
+                    model: Categorie,
+                    attributes: ['nom_categorie']
+                }]
+            }]
+        });
         
         if (!artisan) {
             console.log("Aucun artisan trouvé avec l'ID :", id);
