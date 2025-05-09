@@ -1,7 +1,8 @@
 import logo from '../assets/logo/Logo.png';
-import search from '../assets/logo/search-blue.svg';
+// import search from '../assets/logo/search-blue.svg';
 import '../assets/css/Header.scss';
 import { NavLink } from "react-router-dom";
+import SearchBar from './searchBar';
 
 
 const Navbar = () => {
@@ -28,12 +29,7 @@ const Navbar = () => {
                     <NavLink className="nav-link menu-link" to="/categorie/services">Services</NavLink>
                 </li>
             </ul>
-            <form className="d-flex " role="search">
-                <input className="form-control ms-5 me-2" type="search" placeholder="Recherchez" aria-label="Search"/>
-                <button className="btn" type="submit">
-                    <img src={search}/>
-                </button>
-            </form>
+            <SearchBar/>
             </div>
         </div>
     </nav>
