@@ -6,7 +6,7 @@ import Banniere from './Banniere';
 const Header = () => {
     return (
         <>
-        <header>
+        <header className=''>
             <Navbar/>
             <Banniere/>
         </header>
