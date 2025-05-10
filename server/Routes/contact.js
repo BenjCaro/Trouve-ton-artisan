@@ -3,4 +3,6 @@ const router = express.Router();
 
 const controller = require('../Controllers/form');
 
-route.post('/', controller.sendMessage);
+router.post('/', controller.sendMessage);
+
+module.exports = router;

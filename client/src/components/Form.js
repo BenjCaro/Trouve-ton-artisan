@@ -15,7 +15,7 @@ const Form = () => {
 
         try {
 
-            await fetch('/contact', {
+            await fetch('http://localhost:5000/contact', {
                 method: "POST",
                 headers: {
                         "Content-Type": "application/json",
@@ -23,15 +23,12 @@ const Form = () => {
                 body: JSON.stringify(formData)
             });
             
-            console.log(formData);
+            // console.log(formData);
             
         } catch (error) {
             console.error("Erreur :", error);
         }
     };
-
-    
-
     return (
         <>
                 <form className='form-contact row mt-3 p-3' method='post' onSubmit={handleSubmit}>
