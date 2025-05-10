@@ -33,7 +33,7 @@ const Form = () => {
                 setFormData({name: "",email: "", objet: "",message: "",});
 
            } else {
-                alert("Echec dans l'envoi du formulaire");
+                alert("Echec dans l'envoi du formulaire : vérifiez les champs!");
            }
             
         } catch (error) {
