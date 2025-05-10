@@ -1,6 +1,7 @@
 import '../assets/css/form.scss';
 import { useState } from 'react';
 
+
 const Form = () => {
 
         const [formData, setFormData] = useState({
@@ -15,7 +16,7 @@ const Form = () => {
 
         try {
 
-            await fetch('http://localhost:5000/contact', {
+           const response = await fetch('http://localhost:5000/contact', {
                 method: "POST",
                 headers: {
                         "Content-Type": "application/json",
@@ -23,7 +24,17 @@ const Form = () => {
                 body: JSON.stringify(formData)
             });
             
-            // console.log(formData);
+            console.log(formData);
+            const data = await response.json();
+            console.log(data);
+            
+           if(data.success === true) {
+                alert('Message envoyé');
+                setFormData({name: "",email: "", objet: "",message: "",});
+
+           } else {
+                alert("Echec dans l'envoi du formulaire");
+           }
             
         } catch (error) {
             console.error("Erreur :", error);
@@ -44,9 +55,9 @@ const Form = () => {
                         <label for="object" className="form-label fw-semibold">Objet</label>
                         <select className="form-items form-select " id='object' name='objet' value={formData.objet} onChange={e => setFormData({...formData, [e.target.name]: e.target.value})}  aria-label="Default select example" required>
                             <option selected>Choissisez l'objet du message</option>
-                            <option value="1">Renseignements</option>
-                            <option value="2">Devis</option>
-                            <option value="3">Rendez-vous</option>
+                            <option value="renseignement">Renseignements</option>
+                            <option value="devis">Devis</option>
+                            <option value="meeting">Rendez-vous</option>
                         </select>
                     </fieldset>
                     <fieldset className="mb-3">
