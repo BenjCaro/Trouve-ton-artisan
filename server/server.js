@@ -5,6 +5,7 @@ const topRouter = require('./Routes/topRoute');
 const artisanRouter = require('./Routes/artisanRoute');
 const categorieRouter = require('./Routes/categorieRoute');
 const searchRouter = require('./Routes/searchArtisanRoute');
+// const contactRouter = require('./Routes/contact');
 
 
 connectDB();
@@ -20,6 +21,9 @@ app.use('/api/top-artisan', topRouter);
 app.use('/api/artisan', artisanRouter);
 app.use('/api', categorieRouter);
 app.use('/api/search', searchRouter);
+// app.use('/contact', contactRouter);
+
+
 
 
 
