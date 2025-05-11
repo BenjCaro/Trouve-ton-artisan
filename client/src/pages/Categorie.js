@@ -33,7 +33,7 @@ const Categorie = () => {
             <main className='mb-3'>
                  <div className='breadcrumb ms-4 mt-4'>
                         <ul className='list-unstyled d-flex'>
-                            <li className='me-2'><Link className='' to='/'>Accueil /</Link></li>
+                            <li className='me-2'><Link className='breadcrumb-link' to='/'>Accueil /</Link></li>
                             <li className='text-capitalize'>{categorie.nom_categorie}</li>
                         </ul>
                 </div>
