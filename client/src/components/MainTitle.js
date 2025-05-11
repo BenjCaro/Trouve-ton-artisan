@@ -4,7 +4,7 @@ const MainTitle = ({title}) => {
     return (
         <>
 
-        <h1 className='main-title text-center text-capitalize'>
+        <h1 className='main-title text-center text-capitalize mt-4'>
                 {title}
         </h1>
         <p className='text-center' >

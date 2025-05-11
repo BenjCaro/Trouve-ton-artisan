@@ -1,5 +1,4 @@
 import Header from '../components/Header';
-import Breadcrumb from '../components/Breadcrumb';
 import Form from '../components/Form';
 import Footer from '../components/Footer';
 import work from '../assets/images/img-travail.jpg';
@@ -33,9 +32,8 @@ console.log("Nom catégorie:", artisan.Specialite?.Categorie?.nom_categorie);
             <header>
                  <Header/>
             </header>
-            <main className='mb-3'>
-                <Breadcrumb/> 
-                <h1 className='main-title text-center'>{artisan.nom_artisan}</h1>
+            <main className='mb-3'> 
+                <h1 className='main-title text-center mt-4'>{artisan.nom_artisan}</h1>
                 <hr className='main-hr'/>
                 <section className='container mb-5'>
                     <div className='bloc-infos-artisan d-flex .flex-row justify-content-center align-items-center mb-3 gap-3'>

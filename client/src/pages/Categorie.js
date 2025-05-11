@@ -1,5 +1,4 @@
 import Header from '../components/Header';
-import Breadcrumb from '../components/Breadcrumb';
 import Card from '../components/Card';
 import MainTitle from '../components/MainTitle';
 import Footer from '../components/Footer';
@@ -32,7 +31,6 @@ const Categorie = () => {
                  <Header/>
         </header>
             <main className='mb-3'>
-                <Breadcrumb/> 
                 <MainTitle title={categorie.nom_categorie} />
                 <section className="container mb-5">
                     <div className="row">
