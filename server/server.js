@@ -5,10 +5,13 @@ const topRouter = require('./Routes/topRoute');
 const artisanRouter = require('./Routes/artisanRoute');
 const categorieRouter = require('./Routes/categorieRoute');
 const searchRouter = require('./Routes/searchArtisanRoute');
+const contactRouter = require('./Routes/contact');
+const cors = require('cors');
 
 
 connectDB();
 const app = express();
+
 app.use(express.static(path.join(__dirname, '../client/build')));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
@@ -16,10 +19,14 @@ app.get('/', (req, res) => {
 
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true })); 
+app.use(cors());
 app.use('/api/top-artisan', topRouter);
 app.use('/api/artisan', artisanRouter);
 app.use('/api', categorieRouter);
 app.use('/api/search', searchRouter);
+app.use('/contact', contactRouter);
+
+
 
 
 
