@@ -28,12 +28,16 @@ const Form = () => {
             const data = await response.json();
             console.log(data);
             
-           if(data.success === true) {
-                alert('Message envoyé');
-                setFormData({name: "",email: "", objet: "",message: "",});
+           if(data.success === false) {
+
+                alert(`Echec dans l'envoi du formulaire : ${data.errors.map(error =>
+                   ` ${error.msg}`
+                )}`);
 
            } else {
-                alert("Echec dans l'envoi du formulaire : vérifiez les champs!");
+                
+                alert('Message envoyé');
+                setFormData({name: "",email: "", objet: "",message: "",});
            }
             
         } catch (error) {
