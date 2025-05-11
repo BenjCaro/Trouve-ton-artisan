@@ -67,7 +67,6 @@ section {
 }
 
 
-
 .top-card:hover {
     background-color:#00497C;
     transform: scale(1.1); 
@@ -78,6 +77,9 @@ section {
     color: #fff;
 }
 
+.card-infos {
+    list-style: none;
+}
 
 
 .medal-icon {
@@ -86,8 +88,13 @@ section {
     left: 75%;
     top: 3.05%;
     bottom: 78.88%;
-
 }
+
+.breadcrumb-link {
+    text-decoration: none;
+    color: rgb(0, 116, 199); 
+}
+
 
 
 @media screen and (max-width: 768px) {

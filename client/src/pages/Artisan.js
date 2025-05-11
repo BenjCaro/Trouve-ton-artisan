@@ -3,8 +3,7 @@ import Form from '../components/Form';
 import Footer from '../components/Footer';
 import work from '../assets/images/img-travail.jpg';
 import {useState, useEffect} from 'react';
-import { useParams } from 'react-router-dom';
-
+import { Link, useParams } from 'react-router-dom';
 
 const Artisan = () => {
     
@@ -33,6 +32,13 @@ console.log("Nom catégorie:", artisan.Specialite?.Categorie?.nom_categorie);
                  <Header/>
             </header>
             <main className='mb-3'> 
+                <div className='breadcrumb ms-4 mt-4'>
+                        <ul className='list-unstyled d-flex'>
+                            <li className='me-2'><Link className='breadcrumb-link' to='/'>Accueil /</Link></li>
+                            <li className='text-capitalize breadcrumb-link me-2'>{artisan.Specialite?.Categorie?.nom_categorie || "Catégorie inconnue"} /</li>
+                            <li className='text-capitalize'>{artisan.nom_artisan}</li>
+                        </ul>
+                </div>
                 <h1 className='main-title text-center mt-4'>{artisan.nom_artisan}</h1>
                 <hr className='main-hr'/>
                 <section className='container mb-5'>
