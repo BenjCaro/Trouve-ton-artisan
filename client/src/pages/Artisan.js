@@ -25,7 +25,7 @@ const Artisan = () => {
 console.log("Specialite:", artisan.Specialite);
 console.log("Categorie:", artisan.Specialite?.Categorie);
 console.log("Nom catégorie:", artisan.Specialite?.Categorie?.nom_categorie);
-
+console.log("Slug:", artisan.Specialite?.Categorie?.slug);
     return (
         <>
             <header>
@@ -35,7 +35,9 @@ console.log("Nom catégorie:", artisan.Specialite?.Categorie?.nom_categorie);
                 <div className='breadcrumb ms-4 mt-4'>
                         <ul className='list-unstyled d-flex'>
                             <li className='me-2'><Link className='breadcrumb-link' to='/'>Accueil /</Link></li>
-                            <li className='text-capitalize breadcrumb-link me-2'>{artisan.Specialite?.Categorie?.nom_categorie || "Catégorie inconnue"} /</li>
+                            <li className='text-capitalize me-2 breadcrumb-link'>
+                                {artisan.Specialite?.Categorie?.nom_categorie} /
+                            </li>
                             <li className='text-capitalize'>{artisan.nom_artisan}</li>
                         </ul>
                 </div>
