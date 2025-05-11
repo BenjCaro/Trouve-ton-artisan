@@ -1,6 +1,7 @@
 
 import '../assets/css/Footer.scss';
 import logo from '../assets/logo/Logo.png';
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
@@ -27,16 +28,16 @@ const Footer = () => {
             <div className='bloc-footer-menu d-flex justify-content-center mt-3'>
                 <ul className='footer-menu d-flex'>
                     <li className='ms-3'>
-                        <a href='#' className='footer-link'>Mentions Légales</a>
+                       <Link to="/soon" className='footer-link'>Mentions Légales</Link>
                     </li>
                     <li className='ms-3'>
-                        <a href='#' className='footer-link'>Données Personnelles</a>
+                        <Link to="/soon" className='footer-link'>Données Personnelles</Link>
                     </li>
                     <li className='ms-3'>
-                        <a href='#' className='footer-link'>Accessibilités</a>
+                        <Link to="/soon" className='footer-link'>Accessibilités</Link>
                     </li>
                     <li className='ms-3'>
-                        <a href='#' className='footer-link'>Politiques des Cookies</a>
+                        <Link to="/soon" className='footer-link'>Politiques des Cookies</Link>
                     </li>
                 </ul>
 

@@ -2,6 +2,7 @@ import Home from './pages/Home';
 import Categorie from './pages/Categorie';
 import Artisan from './pages/Artisan';
 import NotFound from './pages/NotFound';
+import WorkInProgress from './pages/WorkInProgress';
 import {Routes, Route, Navigate} from "react-router-dom";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/artisan/:id" element={<Artisan />} />
         <Route path="*" element={<Navigate to="/404"/>}></Route>
         <Route path="/404" element={<NotFound/>}></Route>
+        <Route path="/soon" element={<WorkInProgress/>}></Route>
      </Routes>
        
       
