@@ -5,6 +5,21 @@ import work from '../assets/images/img-travail.jpg';
 import {useState, useEffect} from 'react';
 import { Link, useParams } from 'react-router-dom';
 
+
+const StarRating = ({ note }) => {
+  
+  return (
+    <li>
+      {[...Array(5)].map((_, index) => (
+        <span key={index} style={{ color: index < Math.round(note) ? "gold" : "gray" }}>
+          ★
+        </span>
+      ))}
+      <span>({note})</span>
+    </li>
+  );
+};
+
 const Artisan = () => {
     
      const {id} = useParams();
@@ -49,10 +64,10 @@ const slug = artisan.Specialite?.Categorie?.slug;
                     <div className='bloc-infos-artisan d-flex .flex-row justify-content-center align-items-center mb-3 gap-3'>
                         <div className='card d-flex flex-column justify-content-center'>
                             <ul className='card-infos mt-3 ms-2'>
-                                <li className='fs-5 text-capitalize'>{artisan.Specialite?.Categorie?.nom_categorie}</li>
-                                <li>{artisan.note}</li>
+                                <li className='fs-5 text-capitalize fw-semibold'>{artisan.Specialite?.Categorie?.nom_categorie}</li>
+                                <StarRating note={artisan.note} />
                                 <li className='text-capitalize'>{artisan.Specialite ? artisan.Specialite.nom_specialite : "Chargement..."}</li>
-                                <li className='text-capitalize'>{artisan.ville}</li>
+                                <li className='text-capitalize'><i class="bi bi-geo-alt"></i> {artisan.ville}</li>
                                 {/* <li>{artisan.site_web ? (
                                                 <a href={artisan.site_web} target="_blank" rel="noopener noreferrer">
                                                     Visiter le site

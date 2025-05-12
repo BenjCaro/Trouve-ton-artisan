@@ -4,6 +4,20 @@ import bronze from '../assets/logo/medal-bronze.svg';
 import {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 
+const StarRating = ({ note }) => {
+  
+  return (
+    <li>
+      {[...Array(5)].map((_, index) => (
+        <span key={index} style={{ color: index < Math.round(note) ? "gold" : "gray" }}>
+          ★
+        </span>
+      ))}
+      <span>({note})</span>
+    </li>
+  );
+};
+
 const Homecards = ({artisan}) => {
 
     const [useTopArtisans, setTopArtisans] = useState([]);
@@ -25,10 +39,10 @@ const Homecards = ({artisan}) => {
                     <div key={index} className='top-card d-flex justify-content-start align-items-center'>
                         <img src={index === 0 ? gold : index === 1 ? silver : bronze} className='medal-icon'/>
                         <ul className='card-infos mt-3 ms-2'>
-                            <li className='text-capitalize fs-5 '>{artisan.nom_artisan}</li>
-                            <li>{artisan.note}</li>
+                            <li className='text-capitalize fs-5 fw-semibold'><i class="bi bi-person-fill"></i> {artisan.nom_artisan}</li>
+                            <StarRating note={artisan.note} />
                             <li className='text-capitalize'>{artisan.Specialite.nom_specialite}</li>
-                            <li className='text-capitalize'>{artisan.ville}</li>
+                            <li className='text-capitalize'><i class="bi bi-geo-alt"></i> {artisan.ville}</li>
                         </ul>
                     </div>
                  </Link>
