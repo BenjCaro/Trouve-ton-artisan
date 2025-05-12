@@ -22,10 +22,10 @@ const Card = ({ artisan, specialite }) => {
     <Link to={`/artisan/${artisan.id}`} className='text-decoration-none'>
       <div className="top-card d-flex flex-column justify-content-center">
         <ul className="card-infos mt-3 ms-2">
-          <li className="text-capitalize fs-5">{artisan.nom_artisan}</li>
+          <li className="text-capitalize fs-5 fw-semibold"><i class="bi bi-person-fill"></i> {artisan.nom_artisan}</li>
           <StarRating note={artisan.note} />
           <li className="text-capitalize">{specialite}</li>
-          <li className="text-capitalize">{artisan.ville}</li>
+          <li className="text-capitalize"><i class="bi bi-geo-alt"></i> {artisan.ville}</li>
         </ul>
       </div>
     </Link>
