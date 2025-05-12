@@ -20,8 +20,8 @@ const SearchBar = () => {
             
         } catch (error) {
             console.error("Erreur lors de la recherche:", error);
-            alert("L'artisan n'existe pas!");
             navigate('/404');
+            alert("L'artisan n'existe pas!");
         }
 
     }; 

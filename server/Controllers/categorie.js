@@ -18,12 +18,16 @@ exports.getAllArtisanByCategorie = async (req, res) => {
             }]
         });
         
+        
+        if (!categorie) {
+            return res.status(404).json({ message: 'Catégorie introuvable' });
+        };
 
          res.json(categorie);
 
     } catch {
         res.status(500).json({message : 'Erreur'});
-    }
+    };
 };
 
 
