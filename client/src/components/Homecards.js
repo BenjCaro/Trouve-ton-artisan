@@ -23,9 +23,17 @@ const Homecards = ({artisan}) => {
     const [useTopArtisans, setTopArtisans] = useState([]);
 
     const getTopArtisans = async () => {
-        const res = await fetch ('api/top-artisan');
-        const json = await res.json();
-        setTopArtisans(json);
+
+       try {
+          const res = await fetch ('api/top-artisan');
+          const json = await res.json();
+          setTopArtisans(json);
+        
+       } catch (error) {
+            console.error("Erreur lors de la recherche:", error);
+            alert("Une erreur s'est produite lors du chargement de la page.");
+       }
+       
     };
 
     useEffect(() => {

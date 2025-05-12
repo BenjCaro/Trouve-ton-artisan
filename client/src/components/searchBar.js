@@ -12,20 +12,19 @@ const SearchBar = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const res = await fetch (`/api/search?nom=${encodeURIComponent(nom)}`); // api/search?nom=Leala correspond à req.query.nom
-        const artisan = await res.json();
+        try {
+            const res = await fetch (`/api/search?nom=${encodeURIComponent(nom)}`); 
+            const artisan = await res.json();
         
-        navigate(`/artisan/${artisan.id}`);
+            navigate(`/artisan/${artisan.id}`);
+            
+        } catch (error) {
+            console.error("Erreur lors de la recherche:", error);
+            alert("L'artisan n'existe pas!");
+            navigate('/404');
+        }
 
-
-    };
-        
-
-
-
-
-
-
+    }; 
     return (
             <form className="d-flex" role="search" onSubmit={handleSubmit}>
                             <input className="form-control ms-lg-0  ms-xl-5 me-2" value={nom} onChange={e => setNom(e.target.value)} type="search" placeholder="Recherchez" aria-label="Search"/>

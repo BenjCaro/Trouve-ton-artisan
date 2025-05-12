@@ -17,6 +17,7 @@ exports.getAllArtisanByCategorie = async (req, res) => {
                 }]
             }]
         });
+        
 
          res.json(categorie);
 

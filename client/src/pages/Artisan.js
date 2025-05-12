@@ -26,9 +26,21 @@ const Artisan = () => {
      const [artisan, setArtisan] = useState({});
 
      const getArtisan = async () => {
+
+        try {
+            
+            const res = await fetch(`/api/artisan/${id}`);
+            const json = await res.json();
+            // console.log(json);
+            setArtisan(json);
+
+        } catch (error) {
+            console.error("Erreur lors de la recherche:", error);
+            alert("Une erreur s'est produite lors du chargement de la page.");
+        }
         const res = await fetch(`/api/artisan/${id}`);
         const json = await res.json();
-        console.log(json);
+        // console.log(json);
         setArtisan(json);
      };
 

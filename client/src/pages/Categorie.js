@@ -14,9 +14,18 @@ const Categorie = () => {
     const [categorie, setCategorie] = useState({});
 
     const getCategorie = async () => {
-        const res = await fetch(`/api/categorie/${slug}`);
-        const json = await res.json();
-        setCategorie(json);
+
+        try {
+
+            const res = await fetch(`/api/categorie/${slug}`);
+            const json = await res.json();
+            setCategorie(json);
+
+        } catch (error) {
+            console.error("Erreur lors de la recherche:", error);
+            alert("Une erreur s'est produite lors du chargement de la page.");
+        }
+
     };
 
     useEffect(() => {
