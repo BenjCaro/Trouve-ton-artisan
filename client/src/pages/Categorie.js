@@ -1,11 +1,10 @@
 import Header from '../components/Header';
-import Breadcrumb from '../components/Breadcrumb';
 import Card from '../components/Card';
 import MainTitle from '../components/MainTitle';
 import Footer from '../components/Footer';
 
 import {useState, useEffect} from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 
        
@@ -32,7 +31,12 @@ const Categorie = () => {
                  <Header/>
         </header>
             <main className='mb-3'>
-                <Breadcrumb/> 
+                 <div className='breadcrumb ms-4 mt-4'>
+                        <ul className='list-unstyled d-flex'>
+                            <li className='me-2'><Link className='breadcrumb-link' to='/'>Accueil /</Link></li>
+                            <li className='text-capitalize'>{categorie.nom_categorie}</li>
+                        </ul>
+                </div>
                 <MainTitle title={categorie.nom_categorie} />
                 <section className="container mb-5">
                     <div className="row">

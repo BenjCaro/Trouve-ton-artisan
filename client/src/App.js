@@ -1,7 +1,9 @@
 import Home from './pages/Home';
 import Categorie from './pages/Categorie';
 import Artisan from './pages/Artisan';
-import {Routes, Route} from "react-router-dom";
+import NotFound from './pages/NotFound';
+import WorkInProgress from './pages/WorkInProgress';
+import {Routes, Route, Navigate} from "react-router-dom";
 
 function App() {
  return (
@@ -14,6 +16,9 @@ function App() {
         <Route path="/categorie/:slug" element={<Categorie/>}>Fabrication</Route>
         <Route path="/categorie/:slug" element={<Categorie/>}>Services</Route>
         <Route path="/artisan/:id" element={<Artisan />} />
+        <Route path="*" element={<Navigate to="/404"/>}></Route>
+        <Route path="/404" element={<NotFound/>}></Route>
+        <Route path="/soon" element={<WorkInProgress/>}></Route>
      </Routes>
        
       
