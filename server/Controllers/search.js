@@ -8,11 +8,6 @@ exports.searchArtisanByName = async (req, res) => {
                 where: {nom_artisan: { [Op.like]: `%${nom}%` }}
          });
 
-         if (!artisan) {
-                console.log("Aucun artisan trouvé :", nom_artisan);
-                return res.status(404).json({ message: "Artisan non trouvé" });
-            }
-
          res.json(artisan);
             
         } catch (error) {

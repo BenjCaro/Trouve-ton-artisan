@@ -4,32 +4,43 @@ import MainTitle from '../components/MainTitle';
 import Footer from '../components/Footer';
 
 import {useState, useEffect} from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 
 
        
 const Categorie = () => {
     const {slug} = useParams();
+    const navigate = useNavigate();
 
     const [categorie, setCategorie] = useState({});
 
     const getCategorie = async () => {
-        const res = await fetch(`/api/categorie/${slug}`);
-        const json = await res.json();
-        setCategorie(json);
+
+        try {
+
+            const res = await fetch(`/api/categorie/${slug}`);
+            const json = await res.json();
+            setCategorie(json);
+
+        } catch (error) {
+            console.error("Erreur lors de la recherche:", error);
+            alert("Une erreur s'est produite lors du chargement de la page.");
+        }
+
     };
 
     useEffect(() => {
         getCategorie();
     }, [slug]);
-   // console.log(categorie); // vérifie si nom_categorie est bien là
     
+    console.log(categorie); // vérifie si nom_categorie est bien la
+
 
     return (
         <>
             <header>
                  <Header/>
-        </header>
+            </header>
             <main className='mb-3'>
                  <div className='breadcrumb ms-4 mt-4'>
                         <ul className='list-unstyled d-flex'>

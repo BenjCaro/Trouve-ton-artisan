@@ -11,10 +11,7 @@ function App() {
      
      <Routes>
         <Route path="/" element={<Home/>}></Route>
-        <Route path="/categorie/:slug" element={<Categorie/>}>Alimentation</Route>
-        <Route path="/categorie/:slug" element={<Categorie/>}>Batiment</Route>
-        <Route path="/categorie/:slug" element={<Categorie/>}>Fabrication</Route>
-        <Route path="/categorie/:slug" element={<Categorie/>}>Services</Route>
+        <Route path="/categorie/:slug" element={<Categorie />} />
         <Route path="/artisan/:id" element={<Artisan />} />
         <Route path="*" element={<Navigate to="/404"/>}></Route>
         <Route path="/404" element={<NotFound/>}></Route>
