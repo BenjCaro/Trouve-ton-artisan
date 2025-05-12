@@ -95,7 +95,11 @@ section {
     color: rgb(0, 116, 199); 
 }
 
-
+@media screen and (max-width: 1200px) {
+    .top-card {
+        width: 300px;
+    }
+}
 
 @media screen and (max-width: 768px) {
 
