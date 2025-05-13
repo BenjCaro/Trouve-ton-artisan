@@ -80,7 +80,7 @@ const slug = artisan.Specialite?.Categorie?.slug;
                                 <StarRating note={artisan.note} />
                                 <li className='text-capitalize'>{artisan.Specialite ? artisan.Specialite.nom_specialite : "Chargement..."}</li>
                                 <li className='text-capitalize'><i class="bi bi-geo-alt"></i> {artisan.ville}</li>
-                                <li>{artisan.site_web ? (
+                                <li className='fst-italic'>{artisan.site_web ? (
                                                 <a href={artisan.site_web} target="_blank" rel="noopener noreferrer">
                                                     Visiter le site
                                                 </a>
