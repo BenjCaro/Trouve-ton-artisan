@@ -15,15 +15,14 @@ const Home = () => {
             <Header/>
         </header>
         <main className='mb-3'>
-            
-            <h1 className='main-title text-center mt-3'>Accueil</h1>
+            <h1 className='main-title text-center mt-4'>Trouve ton Artisan avec ta région!</h1>
             <section className='mb-3'>
-                <h2 className='section-title text-center'>
+                <h2 className='section-title text-center mb-2'>
                     Comment trouver mon artisan?
                 </h2>
-                <p className='text-center fw-bold'>
+                <h3 className='text-center fw-bold fs-6'>
                     En 4 étapes, votre Région vous aide à trouver l'artisan de votre choix.
-                </p>
+                </h3>
                 <div className='d-flex justify-content-center mb-3'>
                     <ol className='bloc-etapes'>
                         <li className='fw-semibold' >
