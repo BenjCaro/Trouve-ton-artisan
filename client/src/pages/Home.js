@@ -1,5 +1,4 @@
 import Header from '../components/Header';
-
 import Pictures from '../components/Pictures';
 import Homecards from '../components/Homecards';
 import Footer from '../components/Footer';
@@ -15,15 +14,19 @@ const Home = () => {
             <Header/>
         </header>
         <main className='mb-3'>
-            
-            <h1 className='main-title text-center mt-3'>Accueil</h1>
+            <div className='breadcrumb ms-4 mt-4'>
+                <ul className='list-unstyled d-flex'>
+                    <li className='me-2'>Accueil</li>  
+                </ul>
+            </div>
+            <h1 className='main-title text-center mt-4'>Trouve ton Artisan avec ta région!</h1>
             <section className='mb-3'>
-                <h2 className='section-title text-center'>
+                <h2 className='section-title text-center mb-2'>
                     Comment trouver mon artisan?
                 </h2>
-                <p className='text-center fw-bold'>
+                <h3 className='text-center fw-bold fs-6'>
                     En 4 étapes, votre Région vous aide à trouver l'artisan de votre choix.
-                </p>
+                </h3>
                 <div className='d-flex justify-content-center mb-3'>
                     <ol className='bloc-etapes'>
                         <li className='fw-semibold' >
@@ -47,7 +50,7 @@ const Home = () => {
             <section className='mb-3'>
                 <h2 className='section-title text-center mt-3 mb-4'>Top 3 des Artisans du mois 
                     <span className='ms-3'>
-                        <img src={hammer}/>
+                        <img src={hammer} alt="marteau"/>
                     </span>
                 </h2>
                 <Homecards />

@@ -7,10 +7,10 @@ const Pictures = () => {
         <>
         <div className='d-flex justify-content-center column-gap-3 mt-5'>
             <figure className='home-pictures '>
-                <img src={workshop} className='img-fluid'/>
+                <img src={workshop} alt="atelier de menuisier" className='img-fluid' loading='lazy'/>
             </figure>
             <figure className='home-pictures'>
-                <img src={baker} className='img-fluid'/>
+                <img src={baker} alt="vitrine d'une boulangerie artisanale" className='img-fluid' loading='lazy'/>
             </figure>
         </div>
         </>

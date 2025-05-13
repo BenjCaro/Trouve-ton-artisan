@@ -10,7 +10,7 @@ const Footer = () => {
           <footer className='container-fluid'>
             <div className='d-flex justify-content-evenly pt-3 bloc-footer-adress'>
                 <div>
-                <img src={logo} className='footer-logo'/>
+                <img src={logo} alt="logo de trouve ton artisan" loading='lazy' className='footer-logo'/>
                 </div>
 
                 <div className='mt-3'>
