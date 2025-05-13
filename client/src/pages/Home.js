@@ -15,6 +15,11 @@ const Home = () => {
             <Header/>
         </header>
         <main className='mb-3'>
+            <div className='breadcrumb ms-4 mt-4'>
+                <ul className='list-unstyled d-flex'>
+                    <li className='me-2'>Accueil</li>  
+                </ul>
+            </div>
             <h1 className='main-title text-center mt-4'>Trouve ton Artisan avec ta région!</h1>
             <section className='mb-3'>
                 <h2 className='section-title text-center mb-2'>
