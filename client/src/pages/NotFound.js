@@ -15,7 +15,7 @@ const NotFound = () => {
         <main>
             <h1 className='main-title text-center mt-4'>Erreur 404</h1>
             <figure className='container mt-4 mb-4 d-flex justify-content-center picture-notfound'>
-                <img className='img-fluid' src={error}/>
+                <img className='img-fluid' alt="Page non trouvée" loading='lazy' src={error}/>
             </figure>
             <div className='mt-4 mb-4 d-flex justify-content-end'>
                 <Link className='me-4' to='/'>Retour Accueil</Link>

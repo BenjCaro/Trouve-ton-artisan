@@ -45,7 +45,7 @@ const Homecards = ({artisan}) => {
                 {useTopArtisans.map((artisan, index) => (
                 <Link to={`/artisan/${artisan.id}`} className='text-decoration-none' >
                     <div key={index} className='top-card d-flex justify-content-start align-items-center'>
-                        <img src={index === 0 ? gold : index === 1 ? silver : bronze} className='medal-icon'/>
+                        <img src={index === 0 ? gold : index === 1 ? silver : bronze} alt="classement des meilleurs artisans" loading='lazy' className='medal-icon'/>
                         <ul className='card-infos mt-3 ms-2'>
                             <li className='text-capitalize fs-5 fw-semibold'><i class="bi bi-person-fill"></i> {artisan.nom_artisan}</li>
                             <StarRating note={artisan.note} />

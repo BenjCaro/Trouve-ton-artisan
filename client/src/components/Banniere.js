@@ -4,7 +4,7 @@ import '../assets/css/Header.scss';
 const Banniere = () => {
     return (
         <>
-        <img src={banner} className='img-fluid banner'/>
+        <img src={banner} alt="banniere du site illustrant les volcans" className='img-fluid banner' loading='lazy'/>
         </>
     );
 };

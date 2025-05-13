@@ -90,7 +90,7 @@ const slug = artisan.Specialite?.Categorie?.slug;
                         </div>
                         <div>
                             <figure className='artisan-pictures'>
-                                <img src={work} className='img-fluid'/>
+                                <img src={work} className='img-fluid' alt="menuisier qui perce une planche" loading='lazy'/>
                             </figure>
                         </div> 
                     </div>     
