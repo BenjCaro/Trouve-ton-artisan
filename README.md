@@ -44,8 +44,7 @@ Il est préciser qu'il est nécessaire de créer un fichier .env avec le mot de 
  ```sh
    cd client
    npm start
-
-
+5. Installation et lancement réussis
 
 
 
