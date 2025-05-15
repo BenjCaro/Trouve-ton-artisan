@@ -30,15 +30,18 @@ Il est préciser qu'il est nécessaire de créer un fichier .env avec le mot de 
      cd Trouve-ton-artisan
 2. Installer les dépendances:
     installer xampp
+   ```sh
     cd server
     npm install
     cd ../client
     npm install
 3. lancer le serveur:
    lancer le serveur mySQL via xampp
+   ```sh
    cd server
    npm start
 4. lancer le front end :
+ ```sh
    cd client
    npm start
 
