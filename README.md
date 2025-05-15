@@ -2,8 +2,8 @@
 App full stack : ReactJS, NodeJS, express, Sequelize(ORM) et MySQL
 
 Le dépôt est divisé en trois dossiers:
-- client : partie front-end
-- server : partie back-end
+- client : partie front-end (port 3000)
+- server : partie back-end (port 5000)
 - Trouve ton artisan BDD : qui contient le script.sql de creation des tables et donnees_artisan.sql qui contient les données.
 
 
@@ -45,8 +45,8 @@ Il est préciser qu'il est nécessaire de créer un fichier .env avec le mot de 
    cd client
    npm start
 
-Une page du navigateur s'ouvrira au port 3000
-Le serveur sera sur le port 5000.
+
+
 
 
 
