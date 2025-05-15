@@ -5,7 +5,8 @@ const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize('trouve_ton_artisan', 'admin2', process.env.password, {
   host: 'localhost',
   port: 3306,
-  dialect: 'mysql'
+  dialect: 'mysql',
+  logging: false
 });
 
 
